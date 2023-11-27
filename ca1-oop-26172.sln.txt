@@ -1,0 +1,46 @@
+public abstract class Shape
+{
+    // Abstract method - to be implemented by derived classes
+    public abstract double CalculateArea();
+
+    // Regular method
+    public void Display()
+    {
+        Console.WriteLine("This is a shape.");
+    }
+}
+
+// Derived class Circle inheriting by the abstract class Shape like
+public class Circle : Shape
+{
+    private double radius;
+
+    public Circle(double r)
+    {
+        radius = r;
+    }
+
+    // Implementation of abstract method from the base class
+    public override double CalculateArea()
+    {
+        return Math.PI * radius * radius;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Creating an instance of the derived class Circle
+        Circle circle = new Circle(5.0);
+        double area = circle.CalculateArea(); // Using the method implemented in the derived class
+        Console.WriteLine($"Area of the circle: {area:F2}");
+
+        circle.Display(); // Using the method inherited from the abstract class Shape
+    }
+
+With this example, i've tried to show what abstract class is and how i would use it.
+
+Shape is CalculateArea() That Display () It is 
+Circle Shape abstract CalculateArea() specification
+
